@@ -6,6 +6,7 @@ const { detectPeerDependencyIssues } = require('../lib/scan');
 const { applyFixes } = require('../lib/fix');
 const { formatReport } = require('../lib/output');
 const { loadConfig } = require('../lib/config');
+const pkg = require('../package.json');
 
 async function main() {
   console.log('DEBUG: CLI main() invoked, process.argv:', process.argv);
@@ -13,6 +14,7 @@ async function main() {
   program
     .name('peer-dep-helper')
     .description('A CLI tool to detect, audit, and fix peer dependency issues.')
+    .version(pkg.version, '--version', 'output the current version')
     .option('--json', 'Output report as JSON')
     .option('--silent', 'Suppress all output except errors')
     .option('--cwd <path>', 'Custom working directory', process.cwd())

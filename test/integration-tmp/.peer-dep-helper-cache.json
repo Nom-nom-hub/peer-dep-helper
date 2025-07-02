@@ -1,0 +1,25 @@
+{
+  "timestamp": 1751498264199,
+  "fileHashes": {
+    "package.json": "dc2efdd6129747d6004a0f18200b5983",
+    "package-lock.json": "0286d1bfb32adb5ba8a6e4b83d9e3d01",
+    "yarn.lock": null,
+    "pnpm-lock.yaml": null
+  },
+  "issues": [
+    {
+      "package": "right-pad",
+      "requiredBy": "integration-test",
+      "requiredVersion": "^1.0.0",
+      "installedVersion": "1.1.1",
+      "demandedBy": [
+        {
+          "name": "integration-test",
+          "versionRange": "^1.0.0"
+        }
+      ],
+      "latestVersion": null,
+      "status": "valid"
+    }
+  ]
+}
