@@ -1,0 +1,10 @@
+{
+  "timestamp": 1751473308343,
+  "fileHashes": {
+    "package.json": "2cb71f36503cb59d3e9b1d244398637c",
+    "package-lock.json": "d7c1437180d113516160a501b82a11d5",
+    "yarn.lock": null,
+    "pnpm-lock.yaml": null
+  },
+  "issues": []
+}

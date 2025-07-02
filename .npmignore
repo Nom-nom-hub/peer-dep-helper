@@ -1,0 +1,7 @@
+# Ignore everything except what's explicitly included in package.json "files"
+*
+!bin/
+!lib/
+!package.json
+!README.md
+!LICENSE
