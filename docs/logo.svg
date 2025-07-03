@@ -1,0 +1,22 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pdh-gradient" x1="0" y1="0" x2="160" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#43cea2"/>
+      <stop offset="1" stop-color="#185a9d"/>
+    </linearGradient>
+  </defs>
+  <!-- Network nodes -->
+  <circle cx="40" cy="40" r="16" fill="url(#pdh-gradient)" />
+  <circle cx="120" cy="40" r="16" fill="url(#pdh-gradient)" />
+  <circle cx="40" cy="120" r="16" fill="url(#pdh-gradient)" />
+  <circle cx="120" cy="120" r="16" fill="url(#pdh-gradient)" />
+  <!-- Connecting lines -->
+  <line x1="40" y1="40" x2="120" y2="40" stroke="#43cea2" stroke-width="4"/>
+  <line x1="40" y1="40" x2="40" y2="120" stroke="#43cea2" stroke-width="4"/>
+  <line x1="120" y1="40" x2="120" y2="120" stroke="#43cea2" stroke-width="4"/>
+  <line x1="40" y1="120" x2="120" y2="120" stroke="#43cea2" stroke-width="4"/>
+  <!-- Sleek checkmark in the center, now green -->
+  <path d="M60 90 L75 110 L105 70" stroke="#43cea2" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Initials -->
+  <text x="80" y="150" text-anchor="middle" font-size="28" fill="#185a9d" font-family="Segoe UI, Arial, sans-serif" font-weight="bold" letter-spacing="2">PDH</text>
+</svg> 
