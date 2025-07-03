@@ -1663,6 +1663,149 @@
         font-size: 11px;
       }
     }
+
+    /* Comparison Section */
+    .comparison-table {
+      width: 100%;
+      margin: 30px 0;
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .comparison-header {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+      color: white;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .comparison-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      border-bottom: 1px solid var(--border-color);
+      transition: background-color 0.2s ease;
+    }
+
+    .comparison-row:hover {
+      background: var(--bg-secondary);
+    }
+
+    .comparison-row:last-child {
+      border-bottom: none;
+    }
+
+    .comparison-cell {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      min-height: 60px;
+      border-right: 1px solid var(--border-color);
+    }
+
+    .comparison-cell:last-child {
+      border-right: none;
+    }
+
+    .comparison-cell.header {
+      font-weight: 600;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .comparison-cell.feature {
+      font-weight: 600;
+      color: var(--text-primary);
+      background: var(--bg-secondary);
+    }
+
+    .comparison-cell.featured {
+      background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(33, 150, 243, 0.1) 100%);
+      border-left: 3px solid var(--accent-secondary);
+    }
+
+    .comparison-highlights {
+      background: var(--bg-secondary);
+      padding: 25px;
+      border-radius: 0 0 12px 12px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .comparison-highlights h4 {
+      margin: 0 0 15px 0;
+      color: var(--text-primary);
+      font-size: 1.2rem;
+    }
+
+    .comparison-highlights ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .comparison-highlights li {
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+    }
+
+    .comparison-intro {
+      text-align: center;
+      margin-bottom: 30px;
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .comparison-note {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-primary);
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .comparison-note h4 {
+      margin: 0 0 10px 0;
+      color: var(--text-primary);
+    }
+
+    .comparison-note p {
+      margin: 0;
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 768px) {
+      .comparison-header,
+      .comparison-row {
+        grid-template-columns: 1fr;
+        font-size: 14px;
+      }
+
+      .comparison-cell {
+        padding: 12px 15px;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .comparison-cell:last-child {
+        border-bottom: none;
+      }
+
+      .comparison-cell.header {
+        background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+        color: white;
+        font-weight: 600;
+      }
+
+      .comparison-cell.feature {
+        background: var(--bg-secondary);
+        font-weight: 600;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1735,6 +1878,301 @@ peer-dep-helper --version</code></pre>
         </div>
       </div>
     </section>
+
+</div>
+</section>
+
+<section id="comparison">
+  <h2>⚖️ How We Compare</h2>
+  <p>See how Peer Dependency Helper stands out from other approaches and tools:</p>
+  
+  <div class="comparison-table">
+    <div class="comparison-header">
+      <div class="comparison-cell header">Feature</div>
+      <div class="comparison-cell header">Manual Approach</div>
+      <div class="comparison-cell header">npm/yarn Warnings</div>
+      <div class="comparison-cell header featured">Peer Dep Helper</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Detection</div>
+      <div class="comparison-cell">❌ Manual inspection of package.json files</div>
+      <div class="comparison-cell">⚠️ Basic warnings during install</div>
+      <div class="comparison-cell featured">✅ Comprehensive scanning with intelligent analysis</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Fixing</div>
+      <div class="comparison-cell">❌ Manual research and trial-and-error</div>
+      <div class="comparison-cell">❌ No automatic fixing</div>
+      <div class="comparison-cell featured">✅ Intelligent version resolution and automatic installation</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Monorepo Support</div>
+      <div class="comparison-cell">❌ Extremely complex and error-prone</div>
+      <div class="comparison-cell">⚠️ Limited workspace awareness</div>
+      <div class="comparison-cell featured">✅ Native support with workspace detection</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Performance</div>
+      <div class="comparison-cell">❌ Time-consuming manual process</div>
+      <div class="comparison-cell">⚠️ Slows down install process</div>
+      <div class="comparison-cell featured">✅ Smart caching and optimized algorithms</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">User Experience</div>
+      <div class="comparison-cell">❌ Frustrating and error-prone</div>
+      <div class="comparison-cell">⚠️ Basic text output</div>
+      <div class="comparison-cell featured">✅ Beautiful themes, emojis, and helpful tips</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">CI/CD Integration</div>
+      <div class="comparison-cell">❌ Not suitable for automation</div>
+      <div class="comparison-cell">⚠️ Exit codes but no structured output</div>
+      <div class="comparison-cell featured">✅ JSON output, exit codes, and configurable behavior</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Customization</div>
+      <div class="comparison-cell">❌ No customization options</div>
+      <div class="comparison-cell">❌ No customization options</div>
+      <div class="comparison-cell featured">✅ 25+ themes, config files, and CLI flags</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Version Resolution</div>
+      <div class="comparison-cell">❌ Manual semver analysis required</div>
+      <div class="comparison-cell">⚠️ Basic version checking</div>
+      <div class="comparison-cell featured">✅ Intelligent semver resolution with multiple strategies</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Caching</div>
+      <div class="comparison-cell">❌ No caching, repeated work</div>
+      <div class="comparison-cell">⚠️ Basic npm/yarn caching</div>
+      <div class="comparison-cell featured">✅ Smart file-based caching for instant results</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Error Handling</div>
+      <div class="comparison-cell">❌ Manual debugging and research</div>
+      <div class="comparison-cell">⚠️ Generic error messages</div>
+      <div class="comparison-cell featured">✅ Detailed error messages with actionable solutions</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Package Manager Support</div>
+      <div class="comparison-cell">❌ Manual process for each</div>
+      <div class="comparison-cell">⚠️ Limited to specific manager</div>
+      <div class="comparison-cell featured">✅ Universal support for npm, yarn, and pnpm</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Workspace Detection</div>
+      <div class="comparison-cell">❌ Manual workspace analysis</div>
+      <div class="comparison-cell">⚠️ Basic workspace support</div>
+      <div class="comparison-cell featured">✅ Automatic workspace and monorepo detection</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Recursive Fixing</div>
+      <div class="comparison-cell">❌ One-time fixes only</div>
+      <div class="comparison-cell">❌ No recursive resolution</div>
+      <div class="comparison-cell featured">✅ Intelligent recursive fixing for transitive dependencies</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Dry Run Mode</div>
+      <div class="comparison-cell">❌ No preview capability</div>
+      <div class="comparison-cell">❌ No dry run option</div>
+      <div class="comparison-cell featured">✅ Preview changes before applying with --dry-run</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Selective Fixing</div>
+      <div class="comparison-cell">❌ All-or-nothing approach</div>
+      <div class="comparison-cell">❌ No selective options</div>
+      <div class="comparison-cell featured">✅ Fix specific packages with --only flag</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Configuration</div>
+      <div class="comparison-cell">❌ No configuration options</div>
+      <div class="comparison-cell">⚠️ Limited to package.json</div>
+      <div class="comparison-cell featured">✅ Multiple config sources: files, env vars, CLI flags</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Theme System</div>
+      <div class="comparison-cell">❌ No theming support</div>
+      <div class="comparison-cell">❌ No theming support</div>
+      <div class="comparison-cell featured">✅ 25+ built-in themes with custom styling</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Spinner Integration</div>
+      <div class="comparison-cell">❌ No progress indicators</div>
+      <div class="comparison-cell">⚠️ Basic progress bars</div>
+      <div class="comparison-cell featured">✅ Beautiful spinners with progress feedback</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Help System</div>
+      <div class="comparison-cell">❌ No built-in help</div>
+      <div class="comparison-cell">⚠️ Basic help documentation</div>
+      <div class="comparison-cell featured">✅ Comprehensive help with examples and tips</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Exit Codes</div>
+      <div class="comparison-cell">❌ No standardized exit codes</div>
+      <div class="comparison-cell">⚠️ Basic exit codes</div>
+      <div class="comparison-cell featured">✅ Proper exit codes for CI/CD integration</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Silent Mode</div>
+      <div class="comparison-cell">❌ No silent operation</div>
+      <div class="comparison-cell">⚠️ Limited quiet options</div>
+      <div class="comparison-cell featured">✅ --silent flag for quiet operation</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Debug Mode</div>
+      <div class="comparison-cell">❌ No debugging capabilities</div>
+      <div class="comparison-cell">⚠️ Limited debug info</div>
+      <div class="comparison-cell featured">✅ --debug flag for detailed troubleshooting</div>
+    </div>
+  </div>
+  
+  <div class="comparison-highlights">
+    <h3>🎯 Why Choose Peer Dependency Helper?</h3>
+    <div class="highlights-grid">
+      <div class="highlight">
+        <span class="highlight-icon">🚀</span>
+        <h4>10x Faster</h4>
+        <p>Automated detection and fixing saves hours of manual work</p>
+      </div>
+      <div class="highlight">
+        <span class="highlight-icon">🎯</span>
+        <h4>More Accurate</h4>
+        <p>Intelligent version resolution prevents compatibility issues</p>
+      </div>
+      <div class="highlight">
+        <span class="highlight-icon">🛡️</span>
+        <h4>Prevents Errors</h4>
+        <p>Catch issues before they reach production or break builds</p>
+      </div>
+      <div class="highlight">
+        <span class="highlight-icon">🎨</span>
+        <h4>Better UX</h4>
+        <p>Beautiful, customizable output makes dependency management enjoyable</p>
+      </div>
+    </div>
+  </div>
+  
+  <h3 style="margin-top: 50px; text-align: center; color: var(--text-primary);">🆚 Comparison with Other Tools</h3>
+  
+  <div class="comparison-table">
+    <div class="comparison-header">
+      <div class="comparison-cell header">Feature</div>
+      <div class="comparison-cell header">npm audit</div>
+      <div class="comparison-cell header">yarn audit</div>
+      <div class="comparison-cell header">pnpm audit</div>
+      <div class="comparison-cell header featured">Peer Dep Helper</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Peer Dependencies</div>
+      <div class="comparison-cell">❌ No peer dependency support</div>
+      <div class="comparison-cell">❌ No peer dependency support</div>
+      <div class="comparison-cell">❌ No peer dependency support</div>
+      <div class="comparison-cell featured">✅ Specialized peer dependency focus</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Security Focus</div>
+      <div class="comparison-cell">✅ Security vulnerabilities</div>
+      <div class="comparison-cell">✅ Security vulnerabilities</div>
+      <div class="comparison-cell">✅ Security vulnerabilities</div>
+      <div class="comparison-cell featured">🎯 Dependency compatibility & structure</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Automatic Fixing</div>
+      <div class="comparison-cell">⚠️ npm audit fix (limited)</div>
+      <div class="comparison-cell">❌ No automatic fixing</div>
+      <div class="comparison-cell">❌ No automatic fixing</div>
+      <div class="comparison-cell featured">✅ Intelligent peer dependency fixing</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Monorepo Support</div>
+      <div class="comparison-cell">⚠️ Basic workspace support</div>
+      <div class="comparison-cell">⚠️ Basic workspace support</div>
+      <div class="comparison-cell">⚠️ Basic workspace support</div>
+      <div class="comparison-cell featured">✅ Native monorepo & workspace detection</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Version Resolution</div>
+      <div class="comparison-cell">❌ No version resolution</div>
+      <div class="comparison-cell">❌ No version resolution</div>
+      <div class="comparison-cell">❌ No version resolution</div>
+      <div class="comparison-cell featured">✅ Intelligent semver resolution</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">User Experience</div>
+      <div class="comparison-cell">⚠️ Basic CLI output</div>
+      <div class="comparison-cell">⚠️ Basic CLI output</div>
+      <div class="comparison-cell">⚠️ Basic CLI output</div>
+      <div class="comparison-cell featured">✅ Beautiful themes & helpful tips</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Customization</div>
+      <div class="comparison-cell">❌ No customization</div>
+      <div class="comparison-cell">❌ No customization</div>
+      <div class="comparison-cell">❌ No customization</div>
+      <div class="comparison-cell featured">✅ 25+ themes & config options</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">JSON Output</div>
+      <div class="comparison-cell">✅ --json flag</div>
+      <div class="comparison-cell">✅ --json flag</div>
+      <div class="comparison-cell">✅ --json flag</div>
+      <div class="comparison-cell featured">✅ --json flag with detailed structure</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Recursive Analysis</div>
+      <div class="comparison-cell">❌ No recursive analysis</div>
+      <div class="comparison-cell">❌ No recursive analysis</div>
+      <div class="comparison-cell">❌ No recursive analysis</div>
+      <div class="comparison-cell featured">✅ Transitive dependency resolution</div>
+    </div>
+    
+    <div class="comparison-row">
+      <div class="comparison-cell feature">Performance</div>
+      <div class="comparison-cell">⚠️ Can be slow on large projects</div>
+      <div class="comparison-cell">⚠️ Can be slow on large projects</div>
+      <div class="comparison-cell">⚠️ Can be slow on large projects</div>
+      <div class="comparison-cell featured">✅ Smart caching for instant results</div>
+    </div>
+  </div>
+  
+  <div class="comparison-note">
+    <h4>💡 Note: Complementary Tools</h4>
+    <p>Peer Dependency Helper is designed to complement security tools like npm audit, yarn audit, and pnpm audit. While those tools focus on security vulnerabilities, Peer Dependency Helper specializes in dependency compatibility and structure issues. Use both for comprehensive dependency management!</p>
+  </div>
+</section>
+</div>
 
     <section id="how-it-works">
       <h2>⚙️ How It Works</h2>
@@ -2595,7 +3033,7 @@ Run: peer-dep-helper fix</code></pre>
         </div>
         
         <div class="example">
-          <h3>📊 JSON Output for CI/CD</h3>
+          <h3>�� JSON Output for CI/CD</h3>
           <p>Get structured output for automated workflows:</p>
           <div class="code-block">
             <h4>Command</h4>
