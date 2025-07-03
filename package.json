@@ -1,6 +1,6 @@
 {
   "name": "peer-dep-helper",
-  "version": "1.0.3",
+  "version": "1.0.1",
   "description": "A CLI tool to detect, audit, and fix peer dependency issues.",
   "main": "index.js",
   "bin": {
@@ -27,13 +27,16 @@
     "@swc/wasm": "^1.12.9",
     "@types/node": "^24.0.10",
     "babel-plugin-macros": "^3.1.0",
+    "boxen": "^8.0.1",
     "chalk": "^4.1.2",
+    "cli-spinner-lite": "^0.1.0",
     "cli-table3": "^0.6.5",
     "commander": "^14.0.0",
     "cosmiconfig": "^9.0.0",
     "esbuild-register": "^3.6.0",
     "execa": "6.1.0",
     "node-notifier": "^10.0.1",
+    "ora": "^8.2.0",
     "semver": "^7.7.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
