@@ -1436,6 +1436,233 @@
     [data-theme="dark"] .theme-preview.elegant .preview-info {
       color: #b0b0b0;
     }
+
+    /* Problem-Solution Section */
+    .problem-solution {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin: 40px 0;
+    }
+
+    .problem, .solution {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 12px;
+      border: 2px solid var(--border-color);
+      box-shadow: 0 4px 16px var(--shadow);
+    }
+
+    .problem {
+      border-left: 4px solid #dc3545;
+    }
+
+    .solution {
+      border-left: 4px solid #28a745;
+    }
+
+    .problem h3, .solution h3 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .problem ul, .solution ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .problem li, .solution li {
+      margin-bottom: 12px;
+      padding-left: 0;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .problem li::before, .solution li::before {
+      margin-right: 8px;
+      font-weight: bold;
+    }
+
+    /* Workflow Section */
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .workflow-step {
+      background: var(--card-bg);
+      padding: 30px 20px;
+      border-radius: 12px;
+      text-align: center;
+      border: 2px solid var(--border-color);
+      box-shadow: 0 4px 16px var(--shadow);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .workflow-step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px var(--shadow-hover);
+      border-color: var(--accent-primary);
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0 auto 20px;
+    }
+
+    .workflow-step h3 {
+      margin-bottom: 15px;
+      color: var(--text-primary);
+    }
+
+    .workflow-step p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Benefits Section */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .benefit {
+      background: var(--card-bg);
+      padding: 30px 25px;
+      border-radius: 12px;
+      text-align: center;
+      border: 2px solid var(--border-color);
+      box-shadow: 0 4px 16px var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .benefit:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px var(--shadow-hover);
+      border-color: var(--accent-secondary);
+    }
+
+    .benefit-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .benefit h3 {
+      margin-bottom: 15px;
+      color: var(--text-primary);
+      font-size: 1.3rem;
+    }
+
+    .benefit p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Responsive Design for New Sections */
+    @media (max-width: 768px) {
+      .problem-solution {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .workflow {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .problem, .solution, .workflow-step, .benefit {
+        padding: 20px;
+      }
+    }
+
+    /* Examples Section */
+    .examples-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .example {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 12px;
+      border: 2px solid var(--border-color);
+      box-shadow: 0 4px 16px var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .example:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px var(--shadow-hover);
+      border-color: var(--accent-primary);
+    }
+
+    .example h3 {
+      margin-bottom: 15px;
+      color: var(--text-primary);
+      font-size: 1.4rem;
+    }
+
+    .example p {
+      margin-bottom: 20px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .example .code-block {
+      margin: 15px 0;
+    }
+
+    .example .code-block h4 {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .example .code-block pre {
+      font-size: 12px;
+      line-height: 1.4;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    @media (max-width: 768px) {
+      .examples-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .example {
+        padding: 20px;
+      }
+
+      .example .code-block pre {
+        font-size: 11px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1478,28 +1705,103 @@ peer-dep-helper --version</code></pre>
       </div>
     </section>
 
-    <section class="why">
-      <h2>🤔 Why Peer Dependency Helper?</h2>
-      <div class="why-grid">
-        <div class="why-item">
-          <span class="why-icon">🔍</span>
-          <h3>Smart Detection</h3>
-          <p>Automatically detects missing, outdated, and conflicting peer dependencies</p>
+    <section id="what-is">
+      <h2>🔍 What is Peer Dependency Helper?</h2>
+      <p>Peer Dependency Helper is a powerful CLI tool designed to solve one of the most frustrating problems in Node.js development: <strong>peer dependency issues</strong>.</p>
+      
+      <div class="problem-solution">
+        <div class="problem">
+          <h3>🚨 The Problem</h3>
+          <p>Peer dependencies are dependencies that your package expects to be installed by the consuming application. When they're missing, outdated, or conflicting, you get:</p>
+          <ul>
+            <li>❌ Broken installations and runtime errors</li>
+            <li>❌ Confusing npm/yarn warnings</li>
+            <li>❌ Incompatible package versions</li>
+            <li>❌ Hours wasted debugging dependency issues</li>
+            <li>❌ Failed CI/CD builds</li>
+          </ul>
         </div>
-        <div class="why-item">
-          <span class="why-icon">⚡</span>
-          <h3>Lightning Fast</h3>
-          <p>Optimized scanning with intelligent caching for large projects</p>
+        
+        <div class="solution">
+          <h3>✅ The Solution</h3>
+          <p>Peer Dependency Helper automatically:</p>
+          <ul>
+            <li>🔍 <strong>Detects</strong> missing, outdated, and conflicting peer dependencies</li>
+            <li>🔧 <strong>Fixes</strong> issues with intelligent version resolution</li>
+            <li>⚡ <strong>Optimizes</strong> performance with smart caching</li>
+            <li>🎨 <strong>Presents</strong> results beautifully with customizable themes</li>
+            <li>🏗️ <strong>Scales</strong> from simple projects to complex monorepos</li>
+          </ul>
         </div>
-        <div class="why-item">
-          <span class="why-icon">🎨</span>
-          <h3>Beautiful Output</h3>
-          <p>25+ themes and customizable styling for a delightful experience</p>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <h2>⚙️ How It Works</h2>
+      <div class="workflow">
+        <div class="workflow-step">
+          <div class="step-number">1</div>
+          <h3>Scan Your Project</h3>
+          <p>Analyzes your package.json files, node_modules, and workspace configurations to understand your dependency structure.</p>
         </div>
-        <div class="why-item">
-          <span class="why-icon">🏗️</span>
-          <h3>Monorepo Support</h3>
-          <p>Built for complex projects with multiple packages and workspaces</p>
+        
+        <div class="workflow-step">
+          <div class="step-number">2</div>
+          <h3>Detect Issues</h3>
+          <p>Identifies missing peer dependencies, version conflicts, and outdated packages that could cause problems.</p>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">3</div>
+          <h3>Provide Solutions</h3>
+          <p>Offers intelligent fixes with proper version resolution, considering compatibility across all your packages.</p>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">4</div>
+          <h3>Apply Fixes</h3>
+          <p>Automatically installs missing dependencies and updates package.json files to resolve conflicts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <h2>🎯 Why Use Peer Dependency Helper?</h2>
+      <div class="benefits-grid">
+        <div class="benefit">
+          <span class="benefit-icon">⏰</span>
+          <h3>Save Time</h3>
+          <p>Stop wasting hours debugging peer dependency issues. Get instant, accurate diagnosis and fixes.</p>
+        </div>
+        
+        <div class="benefit">
+          <span class="benefit-icon">🛡️</span>
+          <h3>Prevent Breakage</h3>
+          <p>Catch dependency issues before they reach production. Ensure your builds and deployments succeed.</p>
+        </div>
+        
+        <div class="benefit">
+          <span class="benefit-icon">🔧</span>
+          <h3>Works Everywhere</h3>
+          <p>Compatible with npm, yarn, and pnpm. Supports monorepos, workspaces, and complex project structures.</p>
+        </div>
+        
+        <div class="benefit">
+          <span class="benefit-icon">🚀</span>
+          <h3>Developer Experience</h3>
+          <p>Beautiful, customizable CLI output with themes, emojis, and helpful tips. Makes dependency management enjoyable.</p>
+        </div>
+        
+        <div class="benefit">
+          <span class="benefit-icon">📊</span>
+          <h3>CI/CD Ready</h3>
+          <p>JSON output, exit codes, and configurable behavior make it perfect for automated workflows and CI/CD pipelines.</p>
+        </div>
+        
+        <div class="benefit">
+          <span class="benefit-icon">🎨</span>
+          <h3>Highly Customizable</h3>
+          <p>25+ themes, config files, environment variables, and CLI flags let you tailor the experience to your needs.</p>
         </div>
       </div>
     </section>
@@ -2194,6 +2496,132 @@ peer-dep-helper --version</code></pre>
             <li><strong>Emojis:</strong> Enable/disable emoji icons for accessibility</li>
             <li><strong>Minimal:</strong> Perfect for CI/CD pipelines and automation</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="usage-examples">
+      <h2>💻 Usage Examples</h2>
+      <p>See Peer Dependency Helper in action with real examples:</p>
+      
+      <div class="examples-grid">
+        <div class="example">
+          <h3>🔍 Basic Audit</h3>
+          <p>Check for peer dependency issues in your project:</p>
+          <div class="code-block">
+            <h4>Command</h4>
+            <pre><code>peer-dep-helper audit</code></pre>
+          </div>
+          <div class="code-block">
+            <h4>Output</h4>
+            <pre><code>╭────────────────────────────────────────────────────╮
+│                                                    │
+│         ┌───────────────────────────────┐          │
+│         │                               │          │
+│         │   🔍 Peer Dependency Helper   │          │
+│         │                               │          │
+│         └───────────────────────────────┘          │
+│   Audit and fix peer dependency issues with ease   │
+│                                                    │
+╰────────────────────────────────────────────────────╯
+✔ ✅ Scan complete!
+
+┌─────────────────────┐
+│                     │
+│   📊 Audit Report   │
+│                     │
+└─────────────────────┘
+❌ Found 2 peer dependency issues:
+
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│   🚨 Missing Peer Dependencies                 │
+│                                                 │
+└─────────────────────────────────────────────────┘
+• react@^18.0.0 (required by @emotion/react@11.11.0)
+• react-dom@^18.0.0 (required by @emotion/react@11.11.0)
+
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│   🔧 Fix Suggestions                           │
+│                                                 │
+└─────────────────────────────────────────────────┘
+Run: peer-dep-helper fix</code></pre>
+          </div>
+        </div>
+        
+        <div class="example">
+          <h3>🔧 Automatic Fix</h3>
+          <p>Automatically install missing peer dependencies:</p>
+          <div class="code-block">
+            <h4>Command</h4>
+            <pre><code>peer-dep-helper fix</code></pre>
+          </div>
+          <div class="code-block">
+            <h4>Output</h4>
+            <pre><code>🔧 Installing 2 packages...
+📦 Installing react@^18.0.0
+📦 Installing react-dom@^18.0.0
+✅ Fixes applied successfully!
+
+🔄 Re-auditing to verify fixes...
+✅ All peer dependencies are valid!
+┌─────────────────────────────────────────┐
+│                                         │
+│   🎉 All issues resolved successfully!  │
+│                                         │
+└─────────────────────────────────────────┘</code></pre>
+          </div>
+        </div>
+        
+        <div class="example">
+          <h3>🎨 Custom Themes</h3>
+          <p>Use beautiful themes to customize your CLI experience:</p>
+          <div class="code-block">
+            <h4>Command</h4>
+            <pre><code>peer-dep-helper audit --theme-preset dracula</code></pre>
+          </div>
+          <div class="code-block">
+            <h4>Output</h4>
+            <pre><code>┌─────────────────────────────────────────────────┐
+│                                                 │
+│   🔍 Peer Dependency Helper                   │
+│                                                 │
+└─────────────────────────────────────────────────┘
+📊 Audit Report
+✅ No peer dependency issues found.
+🎉 Your project is in perfect shape!</code></pre>
+          </div>
+        </div>
+        
+        <div class="example">
+          <h3>📊 JSON Output for CI/CD</h3>
+          <p>Get structured output for automated workflows:</p>
+          <div class="code-block">
+            <h4>Command</h4>
+            <pre><code>peer-dep-helper audit --json</code></pre>
+          </div>
+          <div class="code-block">
+            <h4>Output</h4>
+            <pre><code>{
+  "issues": [
+    {
+      "package": "react",
+      "status": "missing",
+      "requiredBy": "my-component-library",
+      "requiredVersion": "^18.0.0",
+      "installedVersion": null,
+      "latestVersion": "18.2.0"
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "missing": 1,
+    "outdated": 0,
+    "valid": 0
+  }
+}</code></pre>
+          </div>
         </div>
       </div>
     </section>
